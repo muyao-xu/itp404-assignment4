@@ -1,0 +1,22 @@
+<button type="back" onclick={{action "back"}}>
+        Back
+</button>
+
+<button type="button" onclick={{action "deleteEmail" model}}>
+        Delete
+      </button>
+<ul>
+  <li>{{model.id}}</li>
+  <li>
+    {{model.from}}
+  </li>
+  <li>
+    {{model.to}}
+  </li>
+  <li>
+    {{model.subject}}
+  </li>
+  <li>
+    {{model.message}}
+  </li>
+</ul>

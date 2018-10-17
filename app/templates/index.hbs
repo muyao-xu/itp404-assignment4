@@ -1,0 +1,22 @@
+<style>
+li {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+</style>
+
+<ul>
+  {{#each model as |email|}}
+    <li>
+      {{#link-to "detail" email.id}}
+        {{email.from}} <br />
+        {{email.message}} <br /><br />
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
