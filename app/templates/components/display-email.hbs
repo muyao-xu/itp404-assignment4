@@ -1,0 +1,12 @@
+<li>
+  <StarButton
+  @starred={{@email.starred}}
+  @onClick={{action "star" @email}}
+  />
+
+  {{#link-to "detail" @email.id}}
+    {{@email.from}} <br />
+    {{truncate-text @email.message 100}}
+    <br /><br />
+  {{/link-to}}
+</li>
