@@ -1,7 +1,7 @@
 <form onsubmit={{action "sendEmail"}}>
   <div>
     <label for="from">From</label>
-    {{input type="text" id="from" value=from}}
+    {{input data-test="compose-from" type="text" id="from" value=from}}
   </div>
   <div>
     <label for="to">To</label>
@@ -13,8 +13,8 @@
   </div>
   <div>
     <label for="message">Message</label>
-    {{textarea rows="8" cols="80" value=message}}
+    {{textarea rows="8" id="message" cols="80" value=message}}
   </div>
 
-  <button type="submit">Send</button>
+  <button data-test="compose-submit" type="submit">Send</button>
 </form>

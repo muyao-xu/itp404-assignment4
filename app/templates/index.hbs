@@ -1,9 +1,9 @@
 
 <h2>Starred Emails:</h2>
-<ul>
+<ul >
   {{#each model as |email|}}
     {{#if email.starred}}
-      <DisplayEmail @email = {{email}}/>
+      <DisplayEmail data-test="starred-email" @email = {{email}}/>
     {{else}}
     {{/if}}
   {{/each}}
@@ -12,7 +12,10 @@
 <h2>All Emails:</h2>
 <ul>
   {{#each model as |email|}}
-      <DisplayEmail @email = {{email}}/>
+    {{#if email.starred}}
+    {{else}}
+      <DisplayEmail data-test="unstarred-email" @email = {{email}}/>
+    {{/if}}
   {{/each}}
 </ul>
 

@@ -2,21 +2,21 @@
         Back
 </button>
 
-<button type="button" onclick={{action "deleteEmail" model}}>
+<button data-test="email-delete" type="button" onclick={{action "deleteEmail" model}}>
         Delete
       </button>
 <ul>
-  <li>{{model.id}}</li>
-  <li>
+  <li data-test="email-id">{{model.id}}</li>
+  <li data-test="email-from">
     {{model.from}}
   </li>
-  <li>
+  <li data-test="email-to">
     {{model.to}}
   </li>
-  <li>
+  <li data-test="email-subject">
     {{model.subject}}
   </li>
-  <li>
+  <li data-test="email-message">
     {{model.message}}
   </li>
 </ul>
