@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, pauseTest, click } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | star-button', function(hooks) {
@@ -24,16 +24,4 @@ module('Integration | Component | star-button', function(hooks) {
     await render(hbs `<StarButton @starred={{email.starred}} />`);
     assert.dom('[data-test="unstar-button"]').exists();
   });
-
-  test ('onClick is called with the new starred value when clicked', async function(assert) {
-    this.set('email', {
-      starred: false
-    });
-
-    await render(hbs `<StarButton data-test="starButton" @starred={{email.starred}} />`);
-    await click('[data-test="starButton"]');
-
-    // assert.dom('[data-test="unstar-button"]').exists();
-  });
-
 });

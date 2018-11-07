@@ -1,10 +1,14 @@
 <button type="back" onclick={{action "back"}}>
-        Back
+  Back
 </button>
 
-<button data-test="email-delete" type="button" onclick={{action "deleteEmail" model}}>
-        Delete
-      </button>
+<button
+  data-test="email-delete"
+  type="button"
+  onclick={{action "deleteEmail" model}}
+>
+  Delete
+</button>
 <ul>
   <li data-test="email-id">{{model.id}}</li>
   <li data-test="email-from">

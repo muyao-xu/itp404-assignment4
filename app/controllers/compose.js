@@ -4,7 +4,6 @@ export default Controller.extend({
   actions: {
     sendEmail(event) {
       event.preventDefault();
-      console.log(this);
 
       let email = this.store.createRecord('email', {
         from: this.from,
