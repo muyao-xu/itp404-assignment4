@@ -1,7 +1,7 @@
 <button type="button" onclick={{action "starEmail"}} >
   {{#if @starred}}
-    <img src="/star-filled.png" alt="filled star" >
+    <img data-test="star-button" src="/star-filled.png" alt="filled star" >
   {{else}}
-    <img src="/star-empty.png" alt="empty star" >
+    <img data-test="unstar-button" src="/star-empty.png" alt="empty star" >
   {{/if}}
 </button>
