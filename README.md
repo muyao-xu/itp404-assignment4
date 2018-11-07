@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/muyao-xu/itp404-assignment4.svg?branch=master)](https://travis-ci.org/muyao-xu/itp404-assignment4)
 # assignment4
 
 This README outlines the details of collaborating on this Ember application.
